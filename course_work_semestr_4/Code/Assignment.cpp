@@ -1,38 +1,37 @@
-/* БС-14 Романюк М.Д.
- * Реалізація методів класу Assingment у файлі Assingment.cpp */
+
 
 #include "Assignment.h"
-// Конструктор за замовчуванням
+// ГЉГ®Г­Г±ГІГ°ГіГЄГІГ®Г° Г§Г  Г§Г Г¬Г®ГўГ·ГіГўГ Г­Г­ГїГ¬
 Assignment::Assignment()
 	: id(0)
 	, priority(0)
 	, component("")
 {}
-// Парметризований конструктор
+// ГЏГ Г°Г¬ГҐГІГ°ГЁГ§Г®ГўГ Г­ГЁГ© ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г°
 Assignment::Assignment(int _id, int _priority, std::string _component)
 	: id(_id)
 	, priority(_priority)
 	, component(_component)
 {}
-// Сеттер ID
+// Г‘ГҐГІГІГҐГ° ID
 void Assignment::setId(int _id) { id = _id; }
-// Сеттер пріоритету
+// Г‘ГҐГІГІГҐГ° ГЇГ°ВіГ®Г°ГЁГІГҐГІГі
 void Assignment::setPriority(int _priority) { priority = _priority; }
-// Сеттер назви компоненту проєкту
+// Г‘ГҐГІГІГҐГ° Г­Г Г§ГўГЁ ГЄГ®Г¬ГЇГ®Г­ГҐГ­ГІГі ГЇГ°Г®ВєГЄГІГі
 void Assignment::setComponent(std::string _component) { component = _component; }
-// Геттер ID
+// ГѓГҐГІГІГҐГ° ID
 int Assignment::getId() const { return id; }
-// Геттер пріоритету
+// ГѓГҐГІГІГҐГ° ГЇГ°ВіГ®Г°ГЁГІГҐГІГі
 int Assignment::getPriority() const { return priority; }
-// Геттер назви компоненту проєкту
+// ГѓГҐГІГІГҐГ° Г­Г Г§ГўГЁ ГЄГ®Г¬ГЇГ®Г­ГҐГ­ГІГі ГЇГ°Г®ВєГЄГІГі
 std::string Assignment::getComponent() const { return component; }
-// Віртуальний метод виводу завдання в потік
+// Г‚ВіГ°ГІГіГ Г«ГјГ­ГЁГ© Г¬ГҐГІГ®Г¤ ГўГЁГўГ®Г¤Гі Г§Г ГўГ¤Г Г­Г­Гї Гў ГЇГ®ГІВіГЄ
 void Assignment::show() const
 {
 	std::cout	<< "Project ID: " << id
 				<< "\nPriority: " << priority
 				<< "\nComponent: " << component << "\n";
 }
-// Віртуальний деструктор
+// Г‚ВіГ°ГІГіГ Г«ГјГ­ГЁГ© Г¤ГҐГ±ГІГ°ГіГЄГІГ®Г°
 Assignment::~Assignment()
 {}
